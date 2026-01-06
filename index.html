@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversário da Alice - 10 Anos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kuromi: {
+                            purple: '#9b5de5',
+                            dark: '#240046',
+                            black: '#1a1a1a',
+                            pink: '#f15bb5',
+                            gray: '#f3f4f6'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Fredoka', 'sans-serif'],
+                        cursive: ['Pacifico', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .skull-pattern {
+            background-color: #240046;
+            background-image: radial-gradient(#3c096c 15%, transparent 16%), radial-gradient(#3c096c 15%, transparent 16%);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
+        }
+        .animate-bounce-slow {
+            animation: bounce 3s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(-5%); }
+            50% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="skull-pattern min-h-screen flex items-center justify-center p-4">
+
+    <!-- Card Principal -->
+    <div class="relative bg-white w-full max-w-md rounded-3xl shadow-2xl overflow-hidden border-4 border-kuromi-black">
+        
+        <!-- Cabeçalho com Orelhas/Tema -->
+        <div class="bg-kuromi-black h-36 relative flex justify-center items-end pb-4 rounded-b-[50px]">
+            <!-- Padrão decorativo sutil no topo -->
+            <div class="absolute top-0 w-full h-full opacity-20" style="background-image: radial-gradient(circle, #ffffff 2px, transparent 2.5px); background-size: 20px 20px;"></div>
+            
+            <!-- Ícone/Logo Estilizado da Kuromi (SVG Inline) -->
+            <div class="bg-white p-3 rounded-full border-4 border-kuromi-pink absolute -bottom-14 shadow-lg animate-bounce-slow z-10">
+                <svg width="90" height="90" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <!-- Capuz -->
+                     <path d="M20,40 Q10,10 40,30 Q50,10 60,30 Q90,10 80,40 Q95,55 90,75 Q85,95 50,95 Q15,95 10,75 Q5,55 20,40 Z" fill="#1a1a1a"/>
+                     <!-- Rosto -->
+                     <ellipse cx="50" cy="65" rx="30" ry="25" fill="white"/>
+                     <!-- Olhos -->
+                     <ellipse cx="40" cy="60" rx="3" ry="5" fill="black"/>
+                     <ellipse cx="60" cy="60" rx="3" ry="5" fill="black"/>
+                     <!-- Nariz -->
+                     <circle cx="50" cy="68" r="2" fill="#f15bb5"/>
+                     <!-- Caveira no capuz -->
+                     <path d="M50 20 C53 20 55 22 55 25 C55 28 53 32 50 32 C47 32 45 28 45 25 C45 22 47 20 50 20 Z" fill="#fbc3bc"/>
+                     <circle cx="48" cy="25" r="1.5" fill="#4a3b3b"/>
+                     <circle cx="52" cy="25" r="1.5" fill="#4a3b3b"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Conteúdo do Convite -->
+        <div class="pt-20 pb-8 px-6 text-center">
+            <h2 class="text-kuromi-purple text-xl font-bold uppercase tracking-widest mb-1">Convite Especial</h2>
+            <h1 class="text-6xl font-cursive text-kuromi-black mb-2 drop-shadow-md">Alice</h1>
+            <div class="inline-block bg-kuromi-pink text-white px-6 py-2 rounded-full text-xl font-bold transform -rotate-2 mb-6 shadow-md border-2 border-white">
+                Faz 10 Anos!
+            </div>
+
+            <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+                Prepare-se para uma festa cheia de atitude e fofura! A Alice espera por você para comemorar no melhor estilo <strong>Kuromi</strong>.
+            </p>
+
+            <!-- Bloco de Informações -->
+            <div class="bg-kuromi-gray rounded-2xl p-6 space-y-6 border-2 border-dashed border-kuromi-purple mx-1 relative">
+                <!-- Ícone decorativo flutuante -->
+                <div class="absolute -top-3 -right-3 text-2xl">💜</div>
+
+                <!-- Data -->
+                <div class="flex items-center space-x-4">
+                    <div class="bg-white p-3 rounded-xl text-kuromi-purple shadow-sm border border-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-xs text-gray-500 font-bold tracking-wider uppercase">Data</p>
+                        <p class="text-kuromi-black font-bold text-lg">08 de Fevereiro</p>
+                    </div>
+                </div>
+
+                <!-- Horário -->
+                <div class="flex items-center space-x-4">
+                    <div class="bg-white p-3 rounded-xl text-kuromi-purple shadow-sm border border-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-xs text-gray-500 font-bold tracking-wider uppercase">Horário</p>
+                        <p class="text-kuromi-black font-bold text-lg">Das 15h às 19h</p>
+                    </div>
+                </div>
+
+                <!-- Local -->
+                <div class="flex items-center space-x-4">
+                    <div class="bg-white p-3 rounded-xl text-kuromi-purple shadow-sm border border-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <div class="text-left flex-1">
+                        <p class="text-xs text-gray-500 font-bold tracking-wider uppercase">Local</p>
+                        <p class="text-kuromi-black font-bold text-lg leading-tight mb-1">A Casa Boa Vista</p>
+                        <p class="text-sm text-gray-600 leading-snug">R. Dr. José Aleixo Irmão, 27 - Alto da Boa Vista<br>Sorocaba - SP</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aviso para os Pais -->
+            <div class="mt-6 bg-purple-50 border-l-4 border-kuromi-purple p-4 rounded-r-xl text-left shadow-sm relative overflow-hidden">
+                <div class="relative z-10 flex">
+                     <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl">💦</span>
+                    </div>
+                    <div class="ml-3">
+                        <h3 class="text-sm font-bold text-kuromi-dark uppercase tracking-wide mb-1">Aviso aos Papais!</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed">
+                            Mande seu filho com <strong>roupas confortáveis</strong>! Haverá brincadeiras lúdicas com água e espuma. Mas fiquem tranquilos: tudo com a presença constante de monitores!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botões de Ação -->
+            <div class="mt-8 space-y-3">
+                <a href="https://www.google.com/maps/search/?api=1&query=R.+Dr.+José+Aleixo+Irmão,+27+-+Alto+da+Boa+Vista,+Sorocaba+-+SP" target="_blank" class="block w-full bg-kuromi-black text-white font-bold py-3 px-4 rounded-xl shadow-lg hover:bg-gray-800 transition transform hover:-translate-y-1 flex items-center justify-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0121 18.382V7.618a1 1 0 01-.447-.894L15 7m0 13V7" />
+                    </svg>
+                    <span>Ver no Mapa</span>
+                </a>
+                
+                <!-- ATENÇÃO: Substitua o número 5515999999999 abaixo pelo número real do WhatsApp (com DDD 15 de Sorocaba ou outro) -->
+                <a href="https://wa.me/5515988019073?text=Ol%C3%A1!%20Gostaria%20de%20confirmar%20minha%20presen%C3%A7a%20no%20anivers%C3%A1rio%20de%2010%20anos%20da%20Alice!%20%F0%9F%92%9C" target="_blank" class="block w-full bg-kuromi-pink text-white font-bold py-3 px-4 rounded-xl shadow-lg hover:bg-pink-600 transition transform hover:-translate-y-1 flex items-center justify-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Confirmar no WhatsApp</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Rodapé Decorativo -->
+        <div class="bg-kuromi-black py-3 text-center">
+            <p class="text-kuromi-purple text-xs font-semibold tracking-widest">HOPE TO SEE YOU THERE! 💀💜</p>
+        </div>
+    </div>
+
+</body>
+</html>
